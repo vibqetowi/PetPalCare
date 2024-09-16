@@ -1,0 +1,88 @@
+<style>
+
+
+    .profile-picture {
+        width: 5rem;
+        border: 2px solid rgb(155, 170, 215);
+        border-radius: 50%;
+    }
+
+
+    #manage-booking-page .button-group .btn-primary {
+        margin: 0.5rem;
+        text-align: left;
+        color:rgb(0, 16, 66) !important;
+        background-color: white !important;
+    }
+   #manage-booking-page .button-group .btn-primary:hover {
+        color:white !important;
+        background-color: rgb(250, 160, 200) !important;
+    }
+        .button-group {
+        width: 100%;
+        text-align: left;
+    }
+
+    h1{
+        font-size: 3.5rem;
+        margin-left: 0.5em;
+    }
+
+        .btn-danger {
+        background-color: red!important;
+        border-color: red;
+        color:white;
+  
+    }
+
+
+</style>
+
+
+
+<div id="manage-booking-page" class="page-container">
+    <div class="card profile-card" data-screen-title="Manage Current Booking">
+        <div class="card-body text-center">
+            <!-- Picture on the left and h2 on the right in the same row -->
+            <div class="row align-items-center justify-content-center">
+                <div class="col-auto d-flex align-items-center">
+                    <img src="./assets/img/profile-img-bob.jpg" alt="Bob's Profile Picture" class="profile-picture">
+                    <h1>Bob</h1>
+                </div>
+                <div class="col-auto">
+                    <h2>Manage Booking #00000</h2>
+                </div>
+            </div>
+<p style="text-align: left;">
+    <i class='bx bx-calendar'></i> Booking hours: [hours] <br>
+    From: [date Time]<br>
+    To: [date Time]
+</p>
+
+
+            <div class="button-group">
+                <button class="btn btn-primary w-100" onclick="loadScreen('chat0.html')">
+                    <i class="fas fa-comments"></i> Chat
+                </button>
+                <button class="btn btn-primary w-100" onclick="loadScreen('live-check-in-0.html')">
+                    <i class="fas fa-eye"></i> Request Live Check In
+                </button>
+                <button class="btn btn-primary w-100" onclick="showNotification('Not Implemented')">
+                    <i class="fas fa-clock"></i> Request Extension
+                </button>
+<button class="btn btn-danger w-100" onclick="showPersistentNotification('Your caretaker has marked your pet as returned, confirm? <br>' + 
+'<div class=\'row\'>' + 
+    '<div class=\'col-6\'>' + 
+        '<button class=\'btn btn-danger w-100\' style=\'padding: 0.5em; font-size: auto; width:50%; \' onclick=\'removePersistentNotification(); showNotification(&quot;Not Implemented&quot;); event.stopPropagation();\'>No</button>' + 
+    '</div>' + 
+    '<div class=\'col-6\'>' + 
+'<button class=\'btn btn-success w-100\' style=\'padding: 0.5em; font-size: auto; width:50%;\' onclick=\'(async () => { await loadScreen(&quot;booking4.html&quot;); removePersistentNotification(); tipUtility(); })(); event.stopPropagation();\'>Yes</button>'+
+    '</div>' + 
+'</div>')">
+    <i class="fas fa-paw"></i> Simulate Pet Return Flow <br> (please click this)
+</button>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+<style>
+    #profile-page-container {
+        align-self: center;
+        justify-self: flex-start;
+        width:95%;
+        
+    }
+
+        #profile-page-container .card {
+      background: white !important;
+        border-radius: 2em !important;
+           margin:auto;
+        padding: 1rem;
+        height: fit-content;
+        width: 100%;
+
+    }
+
+
+    .profile-picture {
+        width: 17rem;
+        border: 2px solid rgb(155, 170, 215);
+        border-radius: 50%;
+    }
+
+    .card-header {
+        background: white;
+        border: none;
+    }
+
+    .card-body button:hover {
+        color: white;
+    }
+
+    button {
+        margin-bottom: 0.5rem;
+        text-align: left;
+     }
+
+    .btn-danger {
+        margin-top: 2rem;
+        background-color: red!important;
+        border-color: red;
+        color: white !important;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+</style>
+
+<div id="profile-page-container" class="page-container">
+            <div class="card profile-card" data-screen-title="User Profile Page">
+                <div class="card-body text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <img src="./assets/img/profile-img-alice.jpg" alt="Alice's Profile Picture"
+                                class="profile-picture img-fluid rounded-circle">
+                        </div>
+                    </div>
+                    <h2 class="mt-3">Alice's Happy Place</h2>
+
+                    <div class="accordion" id="profileAccordion">
+                <!-- Rewards Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingRewards">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseRewards" aria-expanded="true" aria-controls="collapseRewards">
+                            Rewards
+                        </button>
+                    </h2>
+                    <div id="collapseRewards" class="accordion-collapse collapse" aria-labelledby="headingRewards"
+                        data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-star"></i> Points:
+                                42</button>
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-shopping-cart"></i>
+                                Shop</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- My Account Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMyAccount">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseMyAccount" aria-expanded="false" aria-controls="collapseMyAccount">
+                            My Account
+                        </button>
+                    </h2>
+                    <div id="collapseMyAccount" class="accordion-collapse collapse" aria-labelledby="headingMyAccount"
+                        data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-user"></i> Personal
+                                Information</button>
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-credit-card"></i> Payment
+                                Methods</button>
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-paw"></i> My Pets</button>
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-history"></i> View Past
+                                Bookings</button>
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-heart"></i> Favourite
+                                Caregivers</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- General Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingGeneral">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseGeneral" aria-expanded="false" aria-controls="collapseGeneral">
+                            General
+                        </button>
+                    </h2>
+                    <div id="collapseGeneral" class="accordion-collapse collapse" aria-labelledby="headingGeneral"
+                        data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-cog"></i>
+                                Settings</button>
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-question-circle"></i> Help
+                                Centre</button>
+                            <button class="btn w-100" onclick="showNotification('Not Implemented')"><i class="fas fa-comment-alt"></i> Share
+                                Feedback</button>
+                        </div>
+                    </div>
+                </div>
+                
+            
+
+                        </div>
+            
+                        <!-- Logout Button (Not part of accordion) -->
+                        <button class="btn btn-danger w-100 mt-3" onclick="resetApp()"><i class="fas fa-sign-out-alt"></i>Logout</button>
+                    </div>
+            
+            
+                </div>
+            
+            </div>
+

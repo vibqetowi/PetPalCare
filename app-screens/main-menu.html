@@ -1,0 +1,122 @@
+<style>
+
+    #main-menu {
+        border-radius: 2em !important;
+        margin: auto;
+        /* Centering */
+        padding: 1rem;
+        width: 95%;
+        justify-content: center;
+
+    }
+
+
+    .btn,
+    .list-group-item {
+        margin-bottom: 0.5rem;   
+        text-align: left;
+        width: 100%;
+        /* Full width */
+        border: none;
+        /* Remove borders */
+    }
+
+</style>
+
+<div class="container mt-3 page-container" id="main-menu" data-screen-title="Grader's Menu">
+    <div class="card accordion" id="mainMenuAccordion">
+        <h2>Main Menu</h2>
+
+        <!-- General Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGeneral">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseGeneral" aria-expanded="true" aria-controls="collapseGeneral">
+                    General Flows
+                </button>
+            </h2>
+            <div id="collapseGeneral" class="accordion-collapse collapse show" aria-labelledby="headingGeneral"
+                data-bs-parent="#mainMenuAccordion">
+                <div class="accordion-body">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="showNotification('Not Implemented')">Log In</button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="showNotification('Not Implemented')">Register</button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="loadScreen('alice-profile.html')">View User Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingBooking">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseBooking" aria-expanded="false" aria-controls="collapseBooking">
+                    Booking Flows (Hi Fi)
+                </button>
+            </h2>
+            <div id="collapseBooking" class="accordion-collapse collapse" aria-labelledby="headingBooking"
+                data-bs-parent="#mainMenuAccordion">
+                <div class="accordion-body">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="loadScreen('booking0.html')">Booking Flow - Start</button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="loadScreen('booking1.html')">Booking Flow - New Booking</button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="loadScreen('booking2.html')">Booking Flow - Review Offers</button>
+                        <button type="button" class="list-group-item list-group-item-action" 
+                        onclick="loadScreen('booking3.html')">Booking Flow - Manage Current</button>
+                        <button type="button" class="list-group-item list-group-item-action" 
+                        onclick="loadScreen('booking4.html').then(() => tipUtility());">Booking Flow - Rate & Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chat Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingChat">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseChat" aria-expanded="false" aria-controls="collapseChat">
+                    Chat Flows
+                </button>
+            </h2>
+            <div id="collapseChat" class="accordion-collapse collapse" aria-labelledby="headingChat"
+                data-bs-parent="#mainMenuAccordion">
+                <div class="accordion-body">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="loadScreen('chat0.html')">Chat Interface</button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="loadScreen('chat1.html')">Chat Interface - More Actions</button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="loadScreen('chat2.html')">Chat Interface - Request Check In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Live Check-In Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingLiveCheckIn">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseLiveCheckIn" aria-expanded="false" aria-controls="collapseLiveCheckIn">
+                    Live Check-In Flows
+                </button>
+            </h2>
+            <div id="collapseLiveCheckIn" class="accordion-collapse collapse" aria-labelledby="headingLiveCheckIn"
+                data-bs-parent="#mainMenuAccordion">
+                <div class="accordion-body">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="showNotification('Not Implemented')">Live Check In - Receive
+                            Request</button>
+                        <button type="button" class="list-group-item list-group-item-action"
+                            onclick="showNotification('Not Implemented')">Live Check In 1</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+
+
+
+<style>
+
+    #rate-caregiver{
+        font-size: 1.5em;
+    }
+    .profile-picture {
+        width: 5rem;
+        border: 2px solid rgb(155, 170, 215);
+        border-radius: 50%;
+    }
+
+
+    h1 {
+        font-size: 3.5rem;
+        margin-left: 0.5em;
+    }
+
+
+#rate-caregiver button.not-selected i.fa-star.five-star {
+    color: rgb(250, 160, 200);
+}
+
+#rate-caregiver button.selected i.fa-star.five-star{
+    color:rgb(155, 170, 215);
+}
+
+i.fa-star{
+
+    color: rgb(0, 16, 66);
+}
+
+#rate-caregiver button.selected {
+    background-color: rgb(250, 160, 200) !important; /* Highlight selected button */
+    color:white;
+    border:none;
+}
+
+
+
+#rate-caregiver button.not-selected {
+    background-color: white !important;
+    color: black !important;
+}
+
+#rate-caregiver .form-control{
+    border: 2px rgb(155, 170, 215) solid;
+    margin: 0.5rem 0; /* 1rem top and bottom, 0 for left and right */
+    border-radius: 1em;
+}
+</style>
+
+
+
+<div id="rate-caregiver" class="page-container">
+    <div class="card profile-card" data-screen-title="Booking Review">
+        <div class="card-body text-center">
+            <!-- Picture on the left and h2 on the right in the same row -->
+            <div class="row align-items-center justify-content-center">
+                <div class="col-auto d-flex align-items-center">
+                    <img src="./assets/img/profile-img-bob.jpg" alt="Bob's Profile Picture" class="profile-picture">
+                    <h1>Bob</h1>
+                </div>
+                <div class="col-auto">
+                    <h2>Review Booking</h2>
+                </div>
+            </div>
+<!-- Rating Buttons -->
+<div class="d-flex flex-column align-items-center">
+    <div class="col w-100">
+        <button id="fiveStarBtn" class="btn not-selected w-100" onclick="tipUtility('fiveStar')">5 Stars
+            <i class="fas fa-star five-star"></i>
+            <i class="fas fa-star five-star"></i>
+            <i class="fas fa-star five-star"></i>
+            <i class="fas fa-star five-star"></i>
+            <i class="fas fa-star five-star"></i>
+        </button>
+    </div>
+    <div class="col w-100">
+        <button id="otherRatingBtn" class="btn not-selected w-100" onclick="tipUtility('other')">
+            Other Rating
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </button>
+    </div>
+</div>
+
+            <!-- Tip Input -->
+            <div id="leave-tip" style="display: none;">
+                <input type="text" class="form-control" placeholder="Leave a tip?">
+            </div>
+
+<div id="leave-tip" class="mt-3" style="display: none;">
+    <input type="text" class="form-control" placeholder="Leave a tip?">
+        <div id="tip-error" style="color: red; display: none;">Must be a number</div>
+</div>
+
+
+            <div class="review-area">
+                <textarea class="form-control" placeholder="Leave a review" onfocus="expandTextArea(this)"
+                    onblur="shrinkTextArea(this)"></textarea>
+            </div>
+
+
+            
+                <button class="btn btn-primary w-100" 
+                onclick="showNotification('Your Booking #0000 is now complete. <br> Your payment method has been charged [amount]. <br> Thank you for using PetPalCare.'); 
+                loadScreen('main-menu.html')">
+                     Submit </button>
+
+            </div>
+        </div>
+    </div>
+</div>

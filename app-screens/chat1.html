@@ -1,0 +1,191 @@
+<style>
+/* Custom style for popup */
+    #more-actions-popup {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(0, 16, 66) !important;
+        height: fit-content;
+        width: 80%;
+        /* Adjust width as needed */
+        z-index: 9999;
+        /* Ensure it's on top of other elements */
+        border-radius: 10px;
+        color: white;
+        padding: 20px;
+    }
+
+     .action-icon {
+            width: 2.5em;
+            height: 2.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            border-radius: 50%;
+            color: #fff !important;
+            font-size: 2em;
+        }
+
+        .camera { background-color: #f56a6a; }
+        .image { background-color: #f2a65a; }
+        .file { background-color: #6acdf2; }
+        .recording { background-color: #9d6af2; }
+        .call { background-color: #4ed964; }
+        .report { background-color: #f26ad9; }
+
+        .action-text {
+            text-align: center;
+            margin-top: 0.5em;
+            font-size: 1em;
+            color: #fff;
+            margin-bottom: 1.5em;
+        }
+
+            .bg-pink {
+        background-color: rgb(250, 160, 200) !important;
+    }
+
+    .text-pink {
+        color: rgb(250, 160, 200) !important;
+    }
+
+    #chatHeader {
+        background: white !important;
+        color: rgb(0, 16, 66);
+        border-bottom: 2px solid rgb(155, 170, 215);
+        font-size: auto;
+    }
+
+    .bob-message {
+        border: 2px solid black;
+        background-color: white !important;
+    }
+
+    .alice-message {
+        background-color: rgb(155, 170, 215) !important;
+    }
+
+    #overlay-container,
+    #chat-container {
+        background: white !important;
+        border-radius: 2em !important;
+        justify-content: center;
+        align-self: center;
+        width: 97%;
+    }
+
+    .btn {
+        padding: 0rem;
+    }
+
+    #send-area {
+        position: absolute;
+        bottom: 0.5em;
+        justify-content: center;
+        align-self: center;
+        width: 90%;
+    }
+
+    #more-actions-popup a {
+    color: white;
+    font-size: 1.5em;
+    position: absolute; 
+    top: 1em; 
+    right: 1.5em;
+     color: white;
+      font-size: 1.5em; 
+      cursor: pointer;
+}
+
+#more-actions-popup a:hover {
+    color: rgb(250, 160, 200);
+}
+
+</style>
+
+
+
+<div class="container page-container" id="overlay-container" data-screen-title="More Chat Actions">
+
+<div id="chat0-placeholder" >
+
+
+<div class="card rounded shadow d-flex flex-column" id="chat-container" data-screen-title="Chat">
+    <div class="card-body">
+        <h2 id="chatHeader" class="p-3">Chat with Bob - Booking ID #000000</h2>
+        <div id="messagesArea" class="flex-grow-1 overflow-auto" style="background-color: #f8f9fa;">
+            <div class="d-flex flex-column align-items-start mb-2">
+                <span class="text-pink">PetPalCare:</span>
+                <div class="text-white bg-pink p-2 rounded">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-start mb-2">
+                <span class="text-black">Bob:</span>
+                <div class="p-2 rounded bob-message">
+                    Donec vitae elit sed odio ultricies dictum.
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-end mb-2">
+                <span class="text-primary">Alice:</span>
+                <div class="p-2 rounded alice-message">
+                    Nam nec felis sodales, fermentum eros nec, gravida odio.
+                </div>
+            </div>
+        </div>
+        <div class="p-3 bg-light mt-auto" id="send-area">
+            <div class="d-flex align-items-center">
+                <div class="btn-group me-2">
+                    <button type="button" class="btn btn-primary rounded-circle" onclick="loadScreen('chat1.html')">
+                        +
+                    </button>
+                </div>
+                <input type="text" id="messageInput" class="form-control me-2" placeholder="Type a message...">
+                <button id="sendButton" onclick="showNotification('Not Implemented')" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+
+
+
+<div class="card" id="more-actions-popup">
+    <a onclick="loadScreen('chat0.html')"
+        >X</a>
+    <div class="card-header">
+            More Actions
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6 col-md-4 action-item" onclick="showNotification('Not Implemented')">
+                    <div class="action-icon camera"><i class="fas fa-camera"></i></div>
+                    <div class="action-text">Take Picture</div>
+                </div>
+                <div class="col-6 col-md-4 action-item" onclick="showNotification('Not Implemented')">
+                    <div class="action-icon image"><i class="fas fa-image"></i></div>
+                    <div class="action-text">Attach Image</div>
+                </div>
+                <div class="col-6 col-md-4 action-item" onclick="showNotification('Not Implemented')">
+                    <div class="action-icon file"><i class="fas fa-file-alt"></i></div>
+                    <div class="action-text">Attach File</div>
+                </div>
+                <div class="col-6 col-md-4 action-item" onclick="loadScreen('chat2.html')">
+                    <div class="action-icon recording"><i class="fas fa-eye"></i></div>
+                    <div class="action-text">Check-In (click this)</div>
+                </div>
+                <div class="col-6 col-md-4 action-item" onclick="showNotification('Not Implemented')">
+                    <div class="action-icon call"><i class="fas fa-phone-alt"></i></div>
+                    <div class="action-text">Call</div>
+                </div>
+                <div class="col-6 col-md-4 action-item" onclick="showNotification('Not Implemented')">
+                    <div class="action-icon report"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="action-text">Report</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

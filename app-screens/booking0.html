@@ -1,0 +1,44 @@
+<style>
+    #booking-start .card {
+        background: white !important;
+        z-index:2 ;
+    }
+
+    .btn {
+        background-color: rgb(155, 170, 215) !important;
+        /* Your primary color */
+        border-color: rgb(155, 170, 215) !important;
+        color: white !important;
+    }
+
+    .btn:hover,
+    .btn:focus {
+        background-color: rgb(250, 160, 200) !important;
+        /* Your hover color */
+        border-color: rgb(250, 160, 200) !important;
+    }
+</style>
+
+<div class="container mt-5 page-container" id="booking-start" data-screen-title="Booking Start">
+    <h2 class="mb-4">My Bookings</h2>
+
+    <div class="card mb-3 rounded shadow">
+        <div class="card-body">
+            <h5 class="card-title">
+                <i class="bx bxs-calendar"></i>
+                Current Bookings
+            </h5>
+            <p class="card-text">You have no bookings.</p>
+            <button class="btn btn-primary" onclick="loadScreen('booking1.html')">+ New Booking</button>
+        </div>
+    </div>
+
+    <div class="card mb-3 rounded shadow">
+        <div class="card-body">
+            <h5 class="card-title">Caretakers Near Me</h5>
+            <img src="./assets/img/caretakers-near-me.jpg" class="img-fluid" alt="Map of caretakers near user">
+            <p class="card-text mt-3">In a real implementation, something like Google Maps API would have been used,
+                this image is just a placeholder.</p>
+        </div>
+    </div>
+</div>

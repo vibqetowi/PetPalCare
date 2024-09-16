@@ -1,0 +1,99 @@
+<style>
+
+    .btn-outline-secondary, .btn-lg{
+        width: 100%;
+        margin: auto;
+    }
+
+    .form-check-input:checked {
+        background-color: rgb(155, 170, 215) !important;
+        border-color: rgb(155, 170, 215) !important;
+    }
+
+    .form-check-input:focus {
+        border-color: rgb(250, 160, 200) !important;
+        box-shadow: 0 0 0 0.25rem rgba(250, 160, 200, 0.25) !important;
+    }
+
+    #submitBookingButton {
+        background-color: rgb(0, 22, 89) !important;
+        /* Your distinct submit button color */
+        border-color: rgb(0, 22, 89) !important;
+    }
+
+    #submitBookingButton:hover {
+        background-color: darken(rgb(0, 22, 89), 10%) !important;
+        /* Slightly darker on hover */
+        border-color: darken(rgb(0, 22, 89), 10%) !important;
+    }
+
+    /* Custom checkbox styling */
+    .form-check-input:checked+.form-check-label {
+        color: rgb(155, 170, 215) !important;
+        /* Update if you want a specific color for checked label text */
+    }
+
+    .form-label {
+        font-weight: bold !important;
+
+        /* Bold labels */
+    }
+
+    .form-check-label{
+                        border: 1px rgb(155, 170, 215) solid;
+        padding: 0.5em;
+        width: 90%;
+        margin: 0.5em;
+        border-radius: 1em;
+    }
+    /* Style for spans */
+    .booking-span {
+        font-weight: bold !important;
+        font-size: 1.5em !important;
+        border-bottom: 1px solid grey !important;
+        display: block !important;
+        margin-bottom: 0.5em !important;
+
+    }
+
+    #create-new-booking .card{
+        margin: auto;
+    }
+</style>
+
+
+<div class="container page-container" id="create-new-booking" data-screen-title="Add New Booking">
+    <div class="card">
+        <div class="card-body">
+            <h2>Create New Booking</h2>
+            <form id="new-booking-form">
+                <div class="mb-3">
+                    <label class="form-label"><strong>Select Pet(s)</strong></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="pet0" name="pet0">
+                        <label class="form-check-label" for="pet0">Alice's dog</label>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-outline-primary" onclick="showNotification('Not Implemented')">+
+                            Add New</button>
+                        <button type="button" class="btn btn-outline-primary"
+                            onclick="showNotification('Not Implemented')">Select All</button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"><strong>Select Duration <i class='bx bx-calendar'></i></strong></label>
+                    <div class="d-flex flex-column align-items-center">
+                        <button type="button" class="btn btn-outline-secondary mb-2"
+                            onclick="showNotification('Not Implemented')">From: Date and Time</button>
+                        <button type="button" class="btn btn-outline-secondary"
+                            onclick="showNotification('Not Implemented')">To: Date and Time</button>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button id="submitBookingButton" type="button" class="btn btn-primary btn-lg"
+                        onclick="submitBooking()">Submit Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
